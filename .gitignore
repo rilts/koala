@@ -1,3 +1,10 @@
 _site
 .sass-cache
 .jekyll-metadata
+*target/
+*test/
+*tmp/
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
