@@ -49,7 +49,8 @@ author-bio: I'm interested in new stuffs, new technologies
  * 이미지 삭제
   * sudo docker rmi ubuntu:latest
 * Dockerfile
-```script
+{% highlight ruby %}
+script
 FROM ubuntu:14.04
 MAINTAINER rilts@test.com
 
@@ -66,7 +67,7 @@ CMD ["nginx"]
 
 EXPOSE 80
 EXPOSE 443
-```
+{% endhighlight %}
   * VOLUME:호스트와 공유할 디렉토리 목록
  * build
   * sudo docker build --tag hello:0.1 .
