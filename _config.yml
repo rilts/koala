@@ -1,34 +1,51 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Title of your blog; shows in the header
+name: "Rilts"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: rilts
-# email: rilts@koalasurvey.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "rilts.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: 
-github_username: rilts
+# Description of your content (will only be used on Google Search)
+description: "rilts"
 
-# Build settings
+# Your name. Will show in your footer + sidebar
+author: "rilts"
+lang: ko
+timezone: Asia/Seoul
+
+url: "http://rilts.github.io"
+baseurl: ""
+
+# A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
+author-bio: ""
+
+# Social Accounts (mine, as placeholders)
+#twitter: ogaclejapan
+github: rilts
+#dribbble:
+#instagram:
+#googleplus: 115224314007024961072
+
+# Google Analytics (you may want to changes these with yours or even delete :)
+#ga_tracking_id: UA-37241684-2
+
+# Handling Reading
+exclude: ["README.md", ".gitignore", "Gemfile", "Gemfile.lock", "vendor", "art"]
+
+# Plugins
+gems: [jekyll-redirect-from, jekyll-paginate]
+
+# Conversion
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+highlighter: rouge
+
+# Outputting
+permalink: pretty
+paginate: 5
+paginate_path: "/page/:num"
+
+# Markdown Processors
+kramdown:
+  input: GFM
+
+# SCSS
+sass:
+  sass_dir: _scss
+  style: :compressed
+
