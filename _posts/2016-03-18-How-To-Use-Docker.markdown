@@ -17,8 +17,8 @@ author-bio: I'm interested in new stuffs, new technologies
 
 * 반드시 root 권한으로 명령을 시작해야 한다.
 * 기본 명령어
- * 이미지 검색
-  * sudo docker search ubuntu
+  * 이미지 검색
+    * sudo docker search ubuntu
  * 이미지 가져 오기
   * sudo docker pull ubuntu:latest
  * 이미지 목록출력
