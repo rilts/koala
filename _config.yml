@@ -29,7 +29,7 @@ github: rilts
 exclude: ["README.md", ".gitignore", "Gemfile", "Gemfile.lock", "vendor", "art"]
 
 # Plugins
-gems: [jekyll-redirect-from, jekyll-paginate]
+gems: [jekyll-redirect-from, jekyll-paginate, jekyll-watch]
 
 # Conversion
 markdown: kramdown
@@ -49,3 +49,6 @@ sass:
   sass_dir: _scss
   style: :compressed
 
+# DISQUS
+disqus:
+  id: "rilts"
