@@ -19,35 +19,35 @@ author-bio: I'm interested in new stuffs, new technologies
 * 기본 명령어
   * 이미지 검색
     * sudo docker search ubuntu
- * 이미지 가져 오기
-  * sudo docker pull ubuntu:latest
- * 이미지 목록출력
-  * sudo docker images
- * 이미지 실행하기
-  * sudo dockert run -i -t --name hello ubuntu /bin/bash
-  * docker run <option> <image name> <run program>
-  * 이미지 안에서 호스트 OS로 빠져 나오기 < exit >
- * Docker 서비스 재시작
-  * sudo servie docker restart
- * 컨테이너 목록 출력 
-  * duso docker ps -a
- * 컨테이너 재시작
-  * sudo docker restart hello
- * 컨테이너에 접속
-  * sudo docker attach hello
- * 컨테이너에서 빠져나오는 방법
-  * exit (컨테이너 정지)
-  * Ctrl + D (컨테이너 정지)
-  * Ctrl + P, Ctrl + Q (컨테이너를 정지하지 않고 빠져나오기) 
- * 호스트에서 컨테이너에 명령실행하기
-  * sudo docker exec hello echo "Hello World"
-  * docker exec <컨테이너> <명령> <매개변수>
- * 컨테이너 정지
-  * sudo docker stop hello
- * 컨테이너 삭제
-  * sudo docker rm hello
- * 이미지 삭제
-  * sudo docker rmi ubuntu:latest
+  * 이미지 가져 오기
+    * sudo docker pull ubuntu:latest
+  * 이미지 목록출력
+    * sudo docker images
+  * 이미지 실행하기
+    * sudo dockert run -i -t --name hello ubuntu /bin/bash
+    * docker run <option> <image name> <run program>
+    * 이미지 안에서 호스트 OS로 빠져 나오기 < exit >
+  * Docker 서비스 재시작
+    * sudo servie docker restart
+  * 컨테이너 목록 출력 
+    * duso docker ps -a
+  * 컨테이너 재시작
+    * sudo docker restart hello
+  * 컨테이너에 접속
+    * sudo docker attach hello
+  * 컨테이너에서 빠져나오는 방법
+    * exit (컨테이너 정지)
+    * Ctrl + D (컨테이너 정지)
+    * Ctrl + P, Ctrl + Q (컨테이너를 정지하지 않고 빠져나오기) 
+  * 호스트에서 컨테이너에 명령실행하기
+    * sudo docker exec hello echo "Hello World"
+    * docker exec <컨테이너> <명령> <매개변수>
+  * 컨테이너 정지
+    * sudo docker stop hello
+  * 컨테이너 삭제
+    * sudo docker rm hello
+  * 이미지 삭제
+    * sudo docker rmi ubuntu:latest
 * Dockerfile
 {% highlight ruby %}
 script
@@ -68,26 +68,25 @@ CMD ["nginx"]
 EXPOSE 80
 EXPOSE 443
 {% endhighlight %}
-  * VOLUME:호스트와 공유할 디렉토리 목록
- * build
-  * sudo docker build --tag hello:0.1 .
-  * docker build <option> <Dockerfile path>
-  * build history 조회
-  * duco docker history hello:0.1
- * 현재 디렉토리에 파일 복사
-  * sudo docker cp hello-nginx:/etc/nginx/nginx.conf ./
-  * docker cp <컨테이너 이름>:<path> <host path>
- * 컨테이너의 변경사항을 이미지파일로 생성
-  * sudo docker commit -a "Foo bar" -m "add hello.txt" hello-nginx hello:0.2
-  * docker commit <option> <container name> <image name>:<tag>
- * 변경된 파일 목록
-  * sudo docker diff hello-nginx
-  * docker diff <container name>
- * 컨테이너 세부 정보 출력
-  * sudo docker inspect hello-nginx
+    * VOLUME:호스트와 공유할 디렉토리 목록
+  * build
+    * sudo docker build --tag hello:0.1 .
+    * docker build <option> <Dockerfile path>
+    * build history 조회
+    * duco docker history hello:0.1
+  * 현재 디렉토리에 파일 복사
+    * sudo docker cp hello-nginx:/etc/nginx/nginx.conf ./
+    * docker cp <컨테이너 이름>:<path> <host path>
+  * 컨테이너의 변경사항을 이미지파일로 생성
+    * sudo docker commit -a "Foo bar" -m "add hello.txt" hello-nginx hello:0.2
+    * docker commit <option> <container name> <image name>:<tag>
+  * 변경된 파일 목록
+    * sudo docker diff hello-nginx
+    * docker diff <container name>
+  * 컨테이너 세부 정보 출력
+    * sudo docker inspect hello-nginx
 * 컨테이너 연결하기
- * sudo docker run --name db -d mongo
- * sudo docker run --name web -p 80:80 --link db:db nginx
- * --link <container name>:<alias>
+  * sudo docker run --name db -d mongo
+  * sudo docker run --name web -p 80:80 --link db:db nginx
+  * --link <container name>:<alias>
 
-(계속)
