@@ -70,6 +70,7 @@ EXPOSE 80
 EXPOSE 443
 {% endhighlight %}
 
+
     * VOLUME:호스트와 공유할 디렉토리 목록
   * build
     * sudo docker build --tag hello:0.1 .
