@@ -32,6 +32,7 @@ djnago REST framework는 RESTful API에 기반한 프레임 워크이다. 때문
 ## 1. Serializer 작성
 ### Serializer란?
 Serializer는 QuerySet 같은 복잡한 데이터와 모델 인스턴스가`JSON``XML` 및 기타 콘텐츠 형식으로 전환하는 것을 가능하게 하는 것이다. 또한 Serializer는 파싱된 데이터 (`JSON``XML` 등)를 모델 인스턴스나 QuerySet같은 복잡한 유형으로 전환할 수 있다.
+
 ![Serializer](https://image.slidesharecdn.com/djangorestframework-150428023227-conversion-gate02/95/introduction-to-django-rest-framework-an-easy-way-to-build-rest-framework-in-django-15-638.jpg?cb=1430720405)
 
 
