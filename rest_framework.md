@@ -1,43 +1,42 @@
-
-# django REST framework는
+# django REST framework란
 <div align = "center">
     <img src = "http://www.django-rest-framework.org/img/logo.png"alt = "logo">
 </ div>
 
  - Django REST framework는 Web APIs 구축 툴킷
  - Django REST framwwork를 사용하는 메리트
-    - 개발자에 [Web browsable API (http://restframework.herokuapp.com/)가 제공되며, 개발 된 API를 브라우저에서 試使 용 (평가) 할 수있다
-    - OAuth1a 및 OAuth2를위한 추가 패키지가 Authentication policies (http://www.django-rest-framework.org/api-guide/authentication/)에 포함되어있다. 이를 통해 사용자 인증을 통해 API를 사용할 수있다
-    - Serialization이 ORM과 non-ORM 데이터 소스를 지원하고있다
-    - Django의 based-views를 계승 대체하여 사용자 정의 할 수
+    - 개발자에 [Web browsable API (http://restframework.herokuapp.com/)가 제공되며, 개발 된 API를 브라우저에서 테스트용으로 사용할 수 있다.
+    - OAuth1a 및 OAuth2를위한 추가 패키지가 Authentication policies ( http://www.django-rest-framework.org/api-guide/authentication/ )에 포함되어있다. 이를 통해 사용자 인증을 통해 API를 사용할 수 있다.
+    - Serialization이 ORM과 non-ORM 데이터 소스를 지원하고 있다.
+    - Django의 based-views를 상속/오버라이드하여 커스터마이징 할 수 있다.
 
-# Requirements / Installation
+# Requirements/Installation
 다음 링크를 참조
  - [Django REST framework - Requirements](http://www.django-rest-framework.org/#requirements)
  - [Django REST framework - Installation](http://www.django-rest-framework.org/#installation)
 
-# RESTful 한 API와
-djnago REST framework는 RESTful API 기반 프레임 워크입니다. 따라서 RESTful이란 무엇인지를 아는 것은 개발에 중요한 것입니다.
+# RESTful한 API란
+djnago REST framework는 RESTful API에 기반한 프레임 워크이다. 때문에 RESTful이 무엇인지를 아는 것은 개발에 중요한 것이다.
  - [RESTful API 란 무엇인가 - Qiita (http://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2)
  - [Web API 란 무엇인가 - Qiita (http://qiita.com/NagaokaKenichi/items/df4c8455ab527aeacf02#%E8%A8%AD%E8%A8%88%E3%81%AE%E7%BE%8E%E3%81%97%E3%81%84web-api%E3%81%AF%E4%BD%BF%E3%81%84%E3%82%84%E3%81%99%E3%81%84)
- - [REST API 란? - API 설계의 포인트 - 이케없는 코드 (http://wp.tech-style.info/archives/683)
- - [Rest ful api 설계 입문 - SlideShare (https://www.slideshare.net/MonstarLabInc/rest-ful-api)
+ - [REST API 란? - API 설계의 포인트 - 사용하면 안되는 코드 (http://wp.tech-style.info/archives/683)
+ - [Restful api 설계 입문 - SlideShare (https://www.slideshare.net/MonstarLabInc/rest-ful-api)
 
 
 # REST API의 구축 방법
-※ 이미 app 폴더가 존재, model의 정의, setting 파일에 설정 migrate도 끝나고 있다고합니다.
- 1. Serializer 만들기
- 2. ViewSet 만들기
+※ 이미 app 폴더가 존재하고, model의 정의, setting파일 설정 migrate도 끝나고 있다고 하자.
+ 1. Serializer 작성
+ 2. ViewSet 작성
  3. URL pattern 설정
 
-## 1. Serializer 만들기
-### Serializer는?
-Serializer는 QuerySet 같은 복잡한 데이터와 모델 인스턴스가`JSON``XML` 및 기타 콘텐츠 형식으로 전환하는 것을 가능하게하는 것입니다. 또한 Serializer는 파싱 된 데이터 (`JSON``XML`etc)를 모델 인스턴스와 QuerySet 같은 복잡한 유형으로 전환 다시 수 있습니다.
+## 1. Serializer 작성
+### Serializer란?
+Serializer는 QuerySet 같은 복잡한 데이터와 모델 인스턴스가`JSON``XML` 및 기타 콘텐츠 형식으로 전환하는 것을 가능하게 하는 것이다. 또한 Serializer는 파싱된 데이터 (`JSON``XML` 등)를 모델 인스턴스나 QuerySet같은 복잡한 유형으로 전환할 수 있다.
 ![Serializer](https://image.slidesharecdn.com/djangorestframework-150428023227-conversion-gate02/95/introduction-to-django-rest-framework-an-easy-way-to-build-rest-framework-in-django-15-638.jpg?cb=1430720405)
 
 
-### Serializer 클래스 만들기
-`serializers.py`을 app 폴더 아래에 작성하고 다음과 같이 Serializer 클래스를 정의합니다.
+### Serializer 클래스 작성
+`serializers.py`을 app 폴더 아래에 작성하고 다음과 같이 Serializer 클래스를 정의한다.
 ```py
 from rest_framework import serializers
 
